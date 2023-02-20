@@ -30,6 +30,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom_theme.scss",
+              "src/custom_styles.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -93,6 +95,8 @@
               "src/assets"
             ],
             "styles": [
+              "src/custom_theme.scss",
+              "src/custom_styles.scss",
               "src/styles.scss"
             ],
             "scripts": []
@@ -100,5 +104,8 @@
         }
       }
     }
+  },
+  "cli": {
+    "analytics": "400182b6-c07f-4307-96dd-04f822f715d7"
   }
 }

@@ -1,0 +1,81 @@
+@use '@angular/material' as mat;
+@include mat.core();
+
+$disco: (
+    50: #f2e3ed,
+    100: #dfbad3,
+    200: #c98cb6,
+    300: #b35d98,
+    400: #a33b82,
+    500: #93186c,
+    600: #8b1564,
+    700: #801159,
+    800: #760e4f,
+    900: #64083d,
+    A100: #ff96cd,
+    A200: #ff63b5,
+    A400: #ff309c,
+    A700: #ff1690,
+    contrast: (
+      50: rgba(black, 0.87),
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: white,
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: rgba(black, 0.87),
+      A200: rgba(black, 0.87),
+      A400: white,
+      A700: white,
+    )
+  );
+
+  $genoa: (
+    50: #e3edee,
+    100: #b9d1d4,
+    200: #8bb3b7,
+    300: #5c949a,
+    400: #397d85,
+    500: #16666f,
+    600: #135e67,
+    700: #10535c,
+    800: #0c4952,
+    900: #063840,
+    A100: #76e8ff,
+    A200: #43dfff,
+    A400: #10d6ff,
+    A700: #00ccf6,
+    contrast: (
+      50: rgba(black, 0.87),
+      100: rgba(black, 0.87),
+      200: rgba(black, 0.87),
+      300: rgba(black, 0.87),
+      400: white,
+      500: white,
+      600: white,
+      700: white,
+      800: white,
+      900: white,
+      A100: rgba(black, 0.87),
+      A200: rgba(black, 0.87),
+      A400: rgba(black, 0.87),
+      A700: rgba(black, 0.87),
+    )
+  );
+
+$my-app-primary: mat.define-palette($disco);
+$my-app-accent:  mat.define-palette($genoa);
+$my-app-warn:    mat.define-palette(mat.$red-palette);
+$my-app-theme:   mat.define-light-theme((
+  color: (
+    primary: $my-app-primary,
+    accent: $my-app-accent,
+    warn: $my-app-warn,
+  )
+));
+
+@include mat.all-component-themes($my-app-theme);

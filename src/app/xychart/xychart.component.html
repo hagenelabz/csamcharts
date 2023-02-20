@@ -1,0 +1,28 @@
+<div fxLayout="row" fxLayoutAlign="space-between center">
+  <div fxLayoutAlign="space-between center" style="padding: 14px">
+    <div
+      style="width: 500px; height: 500px; background-color: var(--disco-900)"
+      fxLayoutAlign="start center"
+    ></div>
+    <mat-card
+      style="width: 500px; height: 500px"
+      fxLayout="column"
+      fxLayoutAlign="space-around center"
+    >
+      <label>Pick Series1 color</label>
+      <mat-radio-group [(ngModel)]="series1Color">
+        <mat-radio-button
+          *ngFor="let color of colors"
+          [value]="color.name"
+          (change)="series1Change(color.hex)"
+        >
+          {{ color.name }}
+        </mat-radio-button>
+      </mat-radio-group>
+      <div>Your color is: {{ series1Color }}</div>
+    </mat-card>
+  </div>
+  <div fxLayoutAlign="end center" style="padding: 14px">
+    <mat-card id="xychartdiv" style="width: 500px; height: 500px"></mat-card>
+  </div>
+</div>

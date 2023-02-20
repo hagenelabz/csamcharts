@@ -1,0 +1,17 @@
+.wrapper {
+  height: 100%;
+}
+
+.content {
+  // height: calc(100% - 122px);
+  width: 100%
+}
+
+.mainBody {
+  position: absolute;
+  right: 0px;
+  height: calc(100% - 100px);
+  overflow: auto
+}
+
+// calc(100vh - 122px)

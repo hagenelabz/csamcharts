@@ -1,0 +1,100 @@
+<div style="width: 100%">
+  <div fxLayout="row" fxFlexAlign="space-between center">
+    <div fxLayout="column" style="width: 100%">
+      <div
+        *ngFor="let icon of regularIcons"
+        fxLayout="column"
+        fxLayoutAlign="start center"
+      >
+        <h3>Phosphor Icons Regular</h3>
+        <div *ngFor="let iconName of icon['icons-array']">
+          {{ iconName }}
+          <svg-icon
+            [src]="
+              '../../assets/phosphoricons/SVGs/Regular/' + iconName + '.svg'
+            "
+            [stretch]="true"
+            [svgStyle]="{
+              'width.px': 36,
+              fill: 'rgb(150,50,255)',
+              'padding.px': 1,
+              'margin.px': 3
+            }"
+          >
+          </svg-icon>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column" style="width: 100%">
+      <div
+        *ngFor="let icon of duoToneIcons"
+        fxLayout="column"
+        fxLayoutAlign="start center"
+      >
+        <h3>Phosphor Duotone</h3>
+        <div *ngFor="let iconName of icon['icons-array']">
+          {{ iconName }}
+          <svg-icon
+            [src]="
+              '../../assets/phosphoricons/SVGs/Duotone/' + iconName + '.svg'
+            "
+            [stretch]="true"
+            [svgStyle]="{
+              'width.px': 36,
+              fill: 'var(--disco-500)',
+              'padding.px': 1,
+              'margin.px': 3
+            }"
+          >
+          </svg-icon>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column" style="width: 100%">
+      <div
+        *ngFor="let icon of fillIcons"
+        fxLayout="column"
+        fxLayoutAlign="start center"
+      >
+        <h3>Phosphor Fill</h3>
+        <div *ngFor="let iconName of icon['icons-array']">
+          {{ iconName }}
+          <svg-icon
+            [src]="'../../assets/phosphoricons/SVGs/Fill/' + iconName + '.svg'"
+            [stretch]="true"
+            [svgStyle]="{
+              'width.px': 36,
+              fill: 'var(--disco-900)',
+              'padding.px': 1,
+              'margin.px': 3
+            }"
+          >
+          </svg-icon>
+        </div>
+      </div>
+    </div>
+    <div fxLayout="column" style="width: 100%">
+      <div
+        *ngFor="let icon of thinIcons"
+        fxLayout="column"
+        fxLayoutAlign="start center"
+      >
+        <h3>Phosphor Thin</h3>
+        <div *ngFor="let iconName of icon['icons-array']">
+          {{ iconName }}
+          <svg-icon
+            [src]="'../../assets/phosphoricons/SVGs/Thin/' + iconName + '.svg'"
+            [stretch]="true"
+            [svgStyle]="{
+              'width.px': 36,
+              fill: 'var(--genoa-900)',
+              'padding.px': 1,
+              'margin.px': 3
+            }"
+          >
+          </svg-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
